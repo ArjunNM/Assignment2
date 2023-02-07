@@ -9,13 +9,14 @@ namespace Assignment2
     public class Circle
     {
 
-        Circle() { 
+        private int radius { get; set; }
+        public Circle() { 
         
                 radius = 1;
 
         }
 
-        Circle( int radius)
+        public Circle( int radius)
         {
             this.radius = radius;
         }
@@ -30,16 +31,16 @@ namespace Assignment2
             this.radius = radius;
         }
 
-        public double getCircumference( int radius)
+        public double getCircumference( )
         {
-            return 2 * 3.14 * radius; 
+            return 2 * 3.14 * this.radius; 
         }
 
-        public double getArea(int radius)
+        public double getArea()
         {
-            return 3.14 * radius * radius;
+            return 3.14 * this.radius * this.radius;
         }
 
-        public int radius { get; set; }
+      
     }
 }
