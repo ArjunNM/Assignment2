@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "DxfHawEAeSiqyXNEVQcKeLkBhPo7FsatDZCosvI/EFHUu+Lvz1QNkv5bkUxzIs9ckGCOW+i7repcdJGd0wEd7g==",
+  "dgSpecHash": "L975ZhHLylmTg16j0JnYhJFKwcmCkK3/1+HEwjy7e9FtbcRVoF3+vayMowM3ucpUxNzj7lD2KbDafPIjZjVpnw==",
   "success": true,
   "projectFilePath": "C:\\MSD\\Software Quality\\Assignment2\\Assignment2\\Assignment2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\arjun\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.console\\3.16.2\\nunit.console.3.16.2.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.consolerunner\\3.16.2\\nunit.consolerunner.3.16.2.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.extension.nunitprojectloader\\3.7.1\\nunit.extension.nunitprojectloader.3.7.1.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.extension.nunitv2driver\\3.8.0\\nunit.extension.nunitv2driver.3.8.0.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.extension.nunitv2resultwriter\\3.6.0\\nunit.extension.nunitv2resultwriter.3.6.0.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.extension.teamcityeventlistener\\1.0.7\\nunit.extension.teamcityeventlistener.1.0.7.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit.extension.vsprojectloader\\3.8.0\\nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
+    "C:\\Users\\arjun\\.nuget\\packages\\nunit3testadapter\\4.3.1\\nunit3testadapter.4.3.1.nupkg.sha512"
+  ],
   "logs": []
 }
