@@ -12,6 +12,7 @@ using Assignment2;
         Circle c = new Circle(); 
         do
         {
+    Console.WriteLine(Convert.ToInt32(2.5));
 
             Console.WriteLine("\nPlease enter the Radius of the circle ");
             try

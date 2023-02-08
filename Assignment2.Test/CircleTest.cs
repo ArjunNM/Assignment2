@@ -1,3 +1,7 @@
+/*********************************************************
+ * Created by : Arjun Nandanath Madathil , Tanvi Koduru
+ * Created on : 5th Feb 2023
+ * *******************************************************/
 namespace Assignment2.Test
 {
     public class CircleTest
@@ -9,104 +13,131 @@ namespace Assignment2.Test
         public int expected;
         public int actual;
         [Test]
-        //checking if the default constructor initialises the Radius value to 1
-        public void DefaultConstructor_RadiusValue_1()
+        //checking if the default constructor initialises the Radius value to 1 and getRadius() returns 1
+        public void GetRadius_RadiusValue_1()
         {
             Circle circle = new Circle();
             expected = 1;
             actual = circle.getRadius();
             Assert.AreEqual(expected, actual);
         }
-        /*
         [Test]
-        public void GetRadius_InputRadiusInConstructorAs50_RadiusIs50()
+        //checking if the parameterised constructor assigns the radius value to 25 and getRadius() returns 25
+        public void GetRadius_RadiusValue_25()
         {
-
-            int radius = 50;
-            Circle circle = new Circle(radius);
-            int resultRadius = circle.GetRadius();
-            Assert.AreEqual(radius, resultRadius);
+            Circle circle = new Circle(25);
+            expected = 25;
+            actual = circle.getRadius();
+            Assert.AreEqual(expected, actual);
         }
-
         [Test]
-        public void GetRadius_SetRadiusAs5_UpdatedRadiusIs5()
+        //checking if the setRadius method sets the radius value and GetRadius fetches the Radius
+        public void GetRadius_AfterSetRadius_RadiusValue_3()
         {
+            Circle circle = new Circle();
+            int radius = 3;
+            circle.SetRadius(3);
+            expected = 3;
+            actual = circle.getRadius();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        //checking if the setRadius sets the value of radiu as 5
+        public void SetRadius_UpdateRadius_As5()
+        {
+            Circle circle = new Circle();
             int radius = 5;
-            Circle circle = new Circle();
-            circle.SetRadius(radius);
-            int resultRadius = circle.GetRadius();
-            Assert.AreEqual(radius, resultRadius);
+            circle.SetRadius(3);
+            expected = 3;
+            actual = circle.getRadius();
+            Assert.AreEqual(expected, actual);
         }
-
-
         [Test]
-        public void SetRadius_SetRadiusAs20_UpdatedRadiusIs20()
+        //checking if the setRadius overrides the radius set using Parameterised constructor
+        public void UpdateRadius_DefaultConst_SetRadius_UpdateRadius__As15()
         {
-            int radius = 20;
-            Circle circle = new Circle();
-            circle.SetRadius(radius);
-            Assert.AreEqual(radius, circle.GetRadius());
-        }
-
-        [Test]
-        public void SetRadius_InputRadiusInConstructorAs20ThenSetRadiusAs30_UpdatedRadiusIs30()
-        {
-            Circle circle = new Circle(20);
-            circle.SetRadius(30);
-            Assert.AreEqual(30, circle.GetRadius());
+            Circle circle = new Circle(10);
+            int radius = 15;
+            circle.SetRadius(15);
+            expected = 15;
+            actual = circle.getRadius();
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void SetRadius_SetRadiusAs0_AreaIs0()
+        //checking if the setRadius can set radius to Zero
+        public void UpdateRadius_toZero()
         {
             Circle circle = new Circle();
+            int radius = 0;
             circle.SetRadius(0);
-            Assert.AreEqual(0, circle.GetArea());
+            expected = 0;
+            actual = circle.getRadius();
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void GetCircumference_DefaulConstructortInstance_CircumferenceIs2PI()
+        //checking the getArea method
+        public void GetArea_RadiusIs1()
         {
             Circle circle = new Circle();
-            Assert.AreEqual(2 * Math.PI, circle.GetCircumference());
+            double expected = 3.14;
+            double actual = circle.getArea();
+            Assert.AreEqual(expected, actual);
         }
 
+
         [Test]
-        public void GetCircumference_InputRadiusInConstructorAs10_CircumferenceIs20PI()
+        //checking the getArea method when radius is 0
+        public void GetArea_RadiusIs0()
         {
-            Circle circle = new Circle(10);
-            Assert.AreEqual(20 * Math.PI, circle.GetCircumference());
+            Circle circle = new Circle(0);
+            double expected = 0;
+            double actual = circle.getArea();
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void GetCircumference_SetRadiusAs30_CircumferenceIs60PI()
-        {
-            Circle circle = new Circle();
-            circle.SetRadius(30);
-            Assert.AreEqual(60 * Math.PI, circle.GetCircumference());
-        }
-
-        [Test]
-        public void GetArea_DefaultConstructorInstance_AreaIsPI()
-        {
-            Circle circle = new Circle();
-            Assert.AreEqual(Math.PI, circle.GetArea());
-        }
-
-        [Test]
-        public void GetArea_InputRadiusInConstructorAs10_AreaIs100PI()
-        {
-            Circle circle = new Circle(10);
-            Assert.AreEqual(100 * Math.PI, circle.GetArea());
-        }
-
-        [Test]
-        public void GetArea_SetRadiusAs20_AreaIs400PI()
+        //checking the getArea method when radius is decimal
+        public void GetArea_RadiusIsDecimal()
         {
             Circle circle = new Circle();
-            circle.SetRadius(20);
-            Assert.AreEqual(400 * Math.PI, circle.GetArea());
+            circle.SetRadius(Convert.ToInt32(1.5));
+            double expected = 12.56;
+            double actual = circle.getArea();
+            Assert.AreEqual(expected, actual);
         }
-        */
+        [Test]
+        //checking the getCircumference of circle with radius 1
+        public void GetCircumference_DefaultConstructor()
+        {
+            Circle circle = new Circle();
+            double expected = 6.28;
+            double actual = circle.getCircumference();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        //checking the getCircumference of circle with radius 3 , changed from parameterised constructor
+        public void GetCircumference_RadiusIs3()
+        {
+            Circle circle = new Circle(3);
+            double expected = 18.84;
+            double actual = circle.getCircumference();
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        //checking the getCircumference of circle with radius 3 , changed from parameterised constructor
+        public void GetCircumference_RadiusIsdefault()
+        {
+            Circle circle = new Circle();
+            circle.SetRadius(Convert.ToInt32(2.5));
+            double expected = 12.56;
+            double actual = circle.getCircumference();
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
